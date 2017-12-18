@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="husihao26@zju.edu.cn">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AI Experiments">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="KATE: K-Competitive Autoencoder for TextCode:def k_comp_tanh(self, x, topk, factor=6.26):     print &amp;apos;run k_comp_tanh&amp;apos;     dim = int(x.get_shape()[1])     # batch_size = tf.to_float(tf.shape(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KATE K-Competitive Autoencoder for Text">
+<meta property="og:url" content="http://yoursite.com/2017/12/18/KATE/index.html">
 <meta property="og:site_name" content="AI Experiments">
-<meta property="og:description" content="husihao26@zju.edu.cn">
+<meta property="og:description" content="KATE: K-Competitive Autoencoder for TextCode:def k_comp_tanh(self, x, topk, factor=6.26):     print &amp;apos;run k_comp_tanh&amp;apos;     dim = int(x.get_shape()[1])     # batch_size = tf.to_float(tf.shape(">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-12-18T06:07:07.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AI Experiments">
-<meta name="twitter:description" content="husihao26@zju.edu.cn">
+<meta name="twitter:title" content="KATE K-Competitive Autoencoder for Text">
+<meta name="twitter:description" content="KATE: K-Competitive Autoencoder for TextCode:def k_comp_tanh(self, x, topk, factor=6.26):     print &amp;apos;run k_comp_tanh&amp;apos;     dim = int(x.get_shape()[1])     # batch_size = tf.to_float(tf.shape(">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/18/KATE/"/>
 
 
 
 
 
-  <title>AI Experiments</title>
+  <title>KATE K-Competitive Autoencoder for Text | AI Experiments</title>
   
 
 
@@ -143,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,145 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/18/KerasLearning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sihao Hu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AI Experiments">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/18/KerasLearning/" itemprop="url">Keras Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-18T13:41:39+08:00">
-                2017-12-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Keras"><a href="#Keras" class="headerlink" title="Keras"></a>Keras</h1><h2 id="aa"><a href="#aa" class="headerlink" title="aa"></a>aa</h2><h3 id="1-Dense层"><a href="#1-Dense层" class="headerlink" title="1.Dense层"></a>1.Dense层</h3><pre><code>keras.layers.core.Dense(output_dim, init=&apos;glorot_uniform&apos;, activation=&apos;linear&apos;, weights=None, W_regularizer=None, b_regularizer=None, activity_regularizer=None, W_constraint=None, b_constraint=None, bias=True, input_dim=None)
-</code></pre><p>Dense就是常用的全连接层，所实现的运算是<code>output = activation(dot(input, kernel)+bias)</code>。其中<code>activation</code>是逐元素计算的激活函数，<code>kernel</code>是本层的权值矩阵，<code>bias</code>为偏置向量，只有当<code>use_bias=True</code>才会添加。</p>
-<ul>
-<li>units：大于0的整数，代表该层的输出维度。  </li>
-<li>activation：激活函数，为预定义的激活函数名（参考激活函数），或逐元素（element-wise）的Theano函数。如果不指定该参数，将不会使用任何激活函数（即使用线性激活函数：a(x)=x)</li>
-<li>use_bias: 布尔值，是否使用偏置项  </li>
-<li>kernel_initializer：权值初始化方法，为预定义初始化方法名的字符串，或用于初始化权重的初始化器。参考initializers  </li>
-<li>bias_initializer：权值初始化方法，为预定义初始化方法名的字符串，或用于初始化权重的初始化器。参考initializers  </li>
-<li>kernel_regularizer：施加在权重上的正则项，为Regularizer对象  </li>
-<li>bias_regularizer：施加在偏置向量上的正则项，为Regularizer对象  </li>
-<li>activity_regularizer：施加在输出上的正则项，为Regularizer对象  </li>
-<li>kernel_constraints：施加在权重上的约束项，为Constraints对象  </li>
-<li>bias_constraints：施加在偏置上的约束项，为Constraints对象  </li>
-</ul>
-<p>输入：<br>形如<code>(batch_size, ..., input_dim)</code>的nD张量，最常见的情况为<code>(batch_size, input_dim)</code>的2D张量<br>输出：<br>形如<code>(batch_size, ..., units)</code>的nD张量，最常见的情况为<code>(batch_size, units)</code>的2D张量</p>
-<p>例子：</p>
-<pre><code>h1_layer = Dense(h1_dim, init=&apos;glorot_normal&apos;, activation=&apos;tanh&apos;)
-</code></pre><h3 id="2-层"><a href="#2-层" class="headerlink" title="2.层"></a>2.层</h3>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -395,9 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/18/KATE/" itemprop="url">KATE K-Competitive Autoencoder for Text</a></h1>
+          <h1 class="post-title" itemprop="name headline">KATE K-Competitive Autoencoder for Text</h1>
         
 
         <div class="post-meta">
@@ -447,9 +309,7 @@
       
 
       
-        
-          
-            <h1 id="KATE-K-Competitive-Autoencoder-for-Text"><a href="#KATE-K-Competitive-Autoencoder-for-Text" class="headerlink" title="KATE: K-Competitive Autoencoder for Text"></a>KATE: K-Competitive Autoencoder for Text</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h2><pre><code>def k_comp_tanh(self, x, topk, factor=6.26):
+        <h1 id="KATE-K-Competitive-Autoencoder-for-Text"><a href="#KATE-K-Competitive-Autoencoder-for-Text" class="headerlink" title="KATE: K-Competitive Autoencoder for Text"></a>KATE: K-Competitive Autoencoder for Text</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h2><pre><code>def k_comp_tanh(self, x, topk, factor=6.26):
     print &apos;run k_comp_tanh&apos;
     dim = int(x.get_shape()[1])
     # batch_size = tf.to_float(tf.shape(x)[0])
@@ -496,8 +356,6 @@
 
     return res
 </code></pre><h2 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment:"></a>Experiment:</h2><h3 id="Qualitative-Analysis"><a href="#Qualitative-Analysis" class="headerlink" title="Qualitative Analysis"></a>Qualitative Analysis</h3><h4 id="1-a"><a href="#1-a" class="headerlink" title="1.a"></a>1.a</h4>
-          
-        
       
     </div>
     
@@ -514,160 +372,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/17/HelloNLP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sihao Hu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AI Experiments">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/17/HelloNLP/" itemprop="url">送依蕾一首诗</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-17T20:30:51+08:00">
-                2017-12-17
-              </time>
+              <a href="/2017/12/17/HelloNLP/" rel="next" title="送依蕾一首诗">
+                <i class="fa fa-chevron-left"></i> 送依蕾一首诗
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2017/12/18/KerasLearning/" rel="prev" title="Keras Learning">
+                Keras Learning <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="SONNET-18"><a href="#SONNET-18" class="headerlink" title="SONNET 18"></a>SONNET 18</h1><p>W.William Shakespeare </p>
-<p>Shall I compare thee to a summer’s day?  </p>
-<p>我该把你比作夏天吗？</p>
-<p>Thou art more lovely and more temperate.</p>
-<p>你比夏天更可爱，更温婉</p>
-<p>Rough winds do shake the darling buds of May,</p>
-<p>狂风会把五月的娇蕊吹落，</p>
-<p>And summer’s lease hath all too short a date.</p>
-<p>夏天出租的期限又太短暂：</p>
-<p>Sometime too hot the eye of heaven shines,</p>
-<p>有时天上的眼睛照得太热，</p>
-<p>And often is his gold complexion dimmed;</p>
-<p>他金色的面容常常变阴暗；</p>
-<p>And every fair from fair sometime declines,</p>
-<p>一切美的事物总不免凋败，</p>
-<p>By chance or nature’s changing course untrimmed.</p>
-<p>被机缘或自然的代谢摧残</p>
-<p>But thy eternal summer shall not fade</p>
-<p>然而你像永恒的夏天不会褪色，</p>
-<p>Nor lose possession of that fair thou owest;</p>
-<p>所有的美好也不会改变，</p>
-<p>Nor shall Death brag thou wander’st in his shade,</p>
-<p>死神也不能夸说你在他阴影里徘徊，</p>
-<p>When in eternal lines to time thou growest:</p>
-<p>当你在永恒的诗行里与时间同久长：</p>
-<p>So long as men can breathe or eyes can see,</p>
-<p>只要人们能呼吸或眼睛看得清，</p>
-<p>So long lives this and this gives life to thee.</p>
-<p>此诗将永存，并且赐给你生命。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -677,10 +407,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -688,6 +419,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -708,8 +443,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -753,6 +497,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#KATE-K-Competitive-Autoencoder-for-Text"><span class="nav-number">1.</span> <span class="nav-text"><a href="#KATE-K-Competitive-Autoencoder-for-Text" class="headerlink" title="KATE: K-Competitive Autoencoder for Text"></a>KATE: K-Competitive Autoencoder for Text</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#Code" class="headerlink" title="Code:"></a>Code:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiment"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#Experiment" class="headerlink" title="Experiment:"></a>Experiment:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Qualitative-Analysis"><span class="nav-number">1.2.1.</span> <span class="nav-text"><a href="#Qualitative-Analysis" class="headerlink" title="Qualitative Analysis"></a>Qualitative Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-a"><span class="nav-number">1.2.1.1.</span> <span class="nav-text"><a href="#1-a" class="headerlink" title="1.a"></a>1.a</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -893,6 +653,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
